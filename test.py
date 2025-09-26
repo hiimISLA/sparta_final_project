@@ -77,7 +77,8 @@ if selected == "광고 소진 확인":
     with bottom:
         @st.cache_data
         def df1_2():
-            return pd.read_csv("df1_2.parquet")
+            return pd.read_parquet("df1_2.parquet")
+
         df1_2 = df1_2()
         df1_2["rpt_time_date"] = pd.to_datetime(df1_2["rpt_time_date"], errors="coerce")
 
@@ -219,7 +220,8 @@ elif selected == "소진 대응 확인":
 elif selected == "수요 예측 확인":
     @st.cache_data
     def df3_1():
-        return pd.read_csv("df3_1.parquet")
+        return pd.read_parquet("df3_1.parquet")
+
     df_merged = df3_1()
 
     st.header("📊 광고·매체별 예측 결과")
