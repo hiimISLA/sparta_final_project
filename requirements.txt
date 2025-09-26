@@ -5,5 +5,9 @@ scikit-learn
 xgboost
 lightgbm
 matplotlib
+seaborn
 plotly
+altair
 joblib
+streamlit-autorefresh
+streamlit-option-menu
