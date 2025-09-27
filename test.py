@@ -96,9 +96,9 @@ if selected == "광고 소진 확인":
         # 필터 적용
         df_filtered = df1_2.copy()
         if ads_filter:
-            df_filtered = df_filtered[df_filtered["광고ID"].isin(ads_filter)]
+            df_filtered = df_filtered[df_filtered["ads_idx"].isin(ads_filter)]
         if media_filter:
-            df_filtered = df_filtered[df_filtered["매체ID"].isin(media_filter)]
+            df_filtered = df_filtered[df_filtered["mda_idx"].isin(media_filter)]
 
         if not df_filtered.empty:
             # 일별 합계
