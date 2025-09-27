@@ -225,8 +225,6 @@ elif selected == "수요 예측 확인":
 
     df_merged = df3_1()
 
-    st.header("📊 광고·매체별 예측 결과")
-
     # 광고는 1개만 선택
     ad_name = st.selectbox("광고 선택", df_merged['ads_idx'].unique())
 
