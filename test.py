@@ -12,41 +12,6 @@ import streamlit as st
 import plotly.express as px
 
 
-############################### 커스텀 CSS 적용###############################
-st.markdown(
-    """
-    <style>
-    /* 전체 배경 */
-    .stApp {
-        background-color: #2D2D2D; /* 밝은 검정 */
-    }
-
-    /* 전체 글자색 */
-    .stApp, .stApp div, .stApp p, .stApp span, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
-        color: #FFFFFF;  /* 흰색 유지 */
-    }
-
-    /* 버튼, 선택박스 등 포인트 색 */
-    .stButton>button, .stSelectbox div[data-baseweb="select"] {
-        background-color: #E9353E;   /* 빨강 */
-        color: #FFFFFF;
-        border-radius: 6px;
-        border: none;
-    }
-
-    .stButton>button:hover {
-        background-color: #c62828;  /* hover 시 조금 어두운 빨강 */
-    }
-
-    /* 데이터프레임 배경 */
-    .stDataFrame {
-        background-color: #2D2D2D;
-        color: #FFFFFF;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # -------------------------------
 # 세션 상태 초기화 fsdjlfjslj
