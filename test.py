@@ -213,14 +213,13 @@ elif selected == "소진 대응 확인":
 
 
 
-
 # -------------------------------
 # 탭3: 수요 예측 확인 
 # -------------------------------
 elif selected == "수요 예측 확인":
     @st.cache_data
     def df3_1():
-        return pd.read_parquet("df3_1.csv")
+        return pd.read_csv("df3_1.csv")   # parquet → csv 로 변경
 
     df_merged = df3_1()
 
@@ -244,16 +243,13 @@ elif selected == "수요 예측 확인":
         # 숫자 변환 (NaN → 0)
         cond_df["turn_sum"] = pd.to_numeric(cond_df["turn_sum"], errors="coerce").fillna(0)
 
-        # float64로 변환 (groupby sum 안정화)
-        cond_df["turn_sum"] = cond_df["turn_sum"].astype("float64")
-
-        pivot_df = (
-            cond_df.groupby(["rpt_time_date", "mda_idx"])["turn_sum"]
-            .apply(lambda x: float(np.sum(x)))   # 강제 float 변환
-            .unstack(fill_value=0)
+        # pivot_table 집계
+        pivot_df = cond_df.pivot_table(
+            index="rpt_time_date",
+            columns="mda_idx",
+            values="turn_sum",
+            aggfunc="sum"
         )
-
-
 
         # Streamlit 라인차트 (매체별 색상 자동 구분)
         st.line_chart(pivot_df)
