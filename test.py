@@ -222,7 +222,7 @@ elif selected == "소진 대응 확인":
 elif selected == "수요 예측 확인":
     @st.cache_data
     def df3_1():
-        return pd.read_csv("df3_1.csv")   # parquet → csv 로 변경
+        return pd.read_csv("df3_1_2.csv")   # parquet → csv 로 변경
 
     df_merged = df3_1()
 
