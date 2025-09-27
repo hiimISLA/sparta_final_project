@@ -241,6 +241,12 @@ elif selected == "수요 예측 확인":
 
     # ---------------- 그래프 ----------------
     if not cond_df.empty:
+        # 숫자 변환 (NaN → 0)
+        cond_df["turn_sum"] = pd.to_numeric(cond_df["turn_sum"], errors="coerce").fillna(0)
+
+        # float64로 변환 (groupby sum 안정화)
+        cond_df["turn_sum"] = cond_df["turn_sum"].astype("float64")
+
         pivot_df = cond_df.pivot_table(
             index="rpt_time_date",
             columns="mda_idx",
