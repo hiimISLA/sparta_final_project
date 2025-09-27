@@ -12,7 +12,7 @@ import streamlit as st
 import plotly.express as px
 
 # -------------------------------
-# 세션 상태 초기화
+# 세션 상태 초기화 fsdjlfjslj
 # -------------------------------
 if "results_df" not in st.session_state:
     st.session_state["results_df"] = None
