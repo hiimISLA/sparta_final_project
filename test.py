@@ -79,7 +79,9 @@ if selected == "광고 소진 확인":
     with bottom:
         @st.cache_data
         def df1_2():
-            return pd.read_parquet("df1_2.parquet")
+            df = pd.read_parquet("df1_2.parquet")
+            df = df.rename(columns={"광고ID": "ads_idx", "매체ID": "mda_idx"})
+            return df
 
         df1_2 = df1_2()
         df1_2["rpt_time_date"] = pd.to_datetime(df1_2["rpt_time_date"], errors="coerce")
