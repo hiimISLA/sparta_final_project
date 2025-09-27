@@ -85,7 +85,6 @@ if selected == "광고 소진 확인":
 
         df1_2 = df1_2()
         df1_2["rpt_time_date"] = pd.to_datetime(df1_2["rpt_time_date"], errors="coerce")
-        st.write(df1_2.columns)
 
         # ---------------- 아래쪽 ----------------
         # st.markdown("### 📈 일별 추이 그래프")
