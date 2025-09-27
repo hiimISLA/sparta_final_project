@@ -247,12 +247,8 @@ elif selected == "수요 예측 확인":
         # float64로 변환 (groupby sum 안정화)
         cond_df["turn_sum"] = cond_df["turn_sum"].astype("float64")
 
-        pivot_df = cond_df.pivot_table(
-            index="rpt_time_date",
-            columns="mda_idx",
-            values="turn_sum",
-            aggfunc="sum"
-        )
+        pivot_df = cond_df.groupby(["rpt_time_date", "mda_idx"])["turn_sum"].sum().unstack(fill_value=0)
+
 
         # Streamlit 라인차트 (매체별 색상 자동 구분)
         st.line_chart(pivot_df)
