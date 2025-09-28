@@ -22,17 +22,17 @@ if "user_inputs" not in st.session_state:
 if "active_tab" not in st.session_state:
     st.session_state['active_tab'] = 0
 
-st.markdown(
-    """
-    <style>
-        /* 전체 페이지 상단 여백 제거 */
-        .block-container {
-            padding-top: 1rem;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     """
+#     <style>
+#         /* 전체 페이지 상단 여백 제거 */
+#         .block-container {
+#             padding-top: 1rem;
+#         }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 # -------------------------------
 # 탭 메뉴
