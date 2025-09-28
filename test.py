@@ -11,6 +11,37 @@ import numpy as np
 import streamlit as st
 import plotly.express as px
 
+import streamlit as st
+
+# 페이지 폭/사이드바 먼저 세팅 (가급적 맨 위)
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
+
+# 상단 여백 최소화 + (선택) 헤더 숨김
+st.markdown("""
+<style>
+/* 1) 메인 컨테이너 패딩 줄이기 */
+.appview-container .main .block-container {
+    padding-top: 0.5rem;   /* 더 줄이고 싶으면 0rem */
+    padding-bottom: 0rem;
+}
+
+/* 2) (선택) 기본 헤더 영역 높이 제거 */
+div[data-testid="stHeader"] {
+    height: 0px;
+}
+
+/* 3) (선택) 툴바 숨김 (우상단 메뉴) */
+div[data-testid="stToolbar"] {
+    display: none;
+}
+
+/* 4) 옵션 메뉴(가로 메뉴) 위쪽 붙이기 위해 섹션 간 마진 줄이기 */
+section.main > div:first-child {
+    padding-top: 0rem !important;
+    margin-top: 0rem !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # -------------------------------
 # 세션 상태 초기화 fsdjlfjslj
@@ -21,18 +52,6 @@ if "user_inputs" not in st.session_state:
     st.session_state["user_inputs"] = None
 if "active_tab" not in st.session_state:
     st.session_state['active_tab'] = 0
-
-# st.markdown(
-#     """
-#     <style>
-#         /* 전체 페이지 상단 여백 제거 */
-#         .block-container {
-#             padding-top: 1rem;
-#         }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
 
 # -------------------------------
 # 탭 메뉴
