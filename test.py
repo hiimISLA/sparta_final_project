@@ -11,6 +11,17 @@ import numpy as np
 import streamlit as st
 import plotly.express as px
 
+
+# -------------------------------
+# 세션 상태 초기화 fsdjlfjslj
+# -------------------------------
+if "results_df" not in st.session_state:
+    st.session_state["results_df"] = None
+if "user_inputs" not in st.session_state:
+    st.session_state["user_inputs"] = None
+if "active_tab" not in st.session_state:
+    st.session_state['active_tab'] = 0
+
 st.markdown(
     """
     <style>
@@ -22,16 +33,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# -------------------------------
-# 세션 상태 초기화 fsdjlfjslj
-# -------------------------------
-if "results_df" not in st.session_state:
-    st.session_state["results_df"] = None
-if "user_inputs" not in st.session_state:
-    st.session_state["user_inputs"] = None
-if "active_tab" not in st.session_state:
-    st.session_state['active_tab'] = 0
 
 # -------------------------------
 # 탭 메뉴
