@@ -21,7 +21,7 @@ st.markdown("""
 <style>
 /* 1) 메인 컨테이너 패딩 줄이기 */
 .appview-container .main .block-container {
-    padding-top: 0.5rem;   /* 더 줄이고 싶으면 0rem */
+    padding-top: 0rem;   /* 더 줄이고 싶으면 0rem */
     padding-bottom: 0rem;
 }
 
