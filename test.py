@@ -11,7 +11,17 @@ import numpy as np
 import streamlit as st
 import plotly.express as px
 
-
+st.markdown(
+    """
+    <style>
+        /* 전체 페이지 상단 여백 제거 */
+        .block-container {
+            padding-top: 1rem;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # -------------------------------
 # 세션 상태 초기화 fsdjlfjslj
