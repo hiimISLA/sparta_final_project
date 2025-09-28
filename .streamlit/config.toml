@@ -1,6 +1,6 @@
 [theme]
 primaryColor="#E9353E"          # 빨강
 backgroundColor="#2D2D2D"       # 메인 배경 (밝은 검정)
-secondaryBackgroundColor="#262730"  # 위젯/카드 배경
+secondaryBackgroundColor="#2D2D2D"  # 위젯/카드 배경
 textColor="#FAFAFA"             # 텍스트 흰색
 font="sans serif"
