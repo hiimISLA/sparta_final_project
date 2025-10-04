@@ -2,7 +2,7 @@
 ## 📌 프로젝트 개요
 
 본 프로젝트는 광고 데이터의 신뢰성 확보와 소진량 최적화를 목표로 진행되었습니다.
-플랫폼에서 발생할 수 있는 **어뷰징(비정상 데이터)**을 방지하고, 안정적인 광고 운영을 위해 소진량 예측과 최적 매체 추천을 수행하였습니다.
+플랫폼에서 발생할 수 있는 어뷰징(비정상 데이터)을 방지하고, 안정적인 광고 운영을 위해 소진량 예측과 최적 매체 추천을 수행하였습니다.
 
 ## 🎯 주요 내용
 ### 1️⃣ 어뷰징 방지
@@ -31,12 +31,17 @@
 운영진의 경험적 의사결정 방식을 데이터 기반 프로세스로 전환
 
 ## 📊 시각화 및 대시보드
+어뷰징
+<링크>
 
 광고 소진량 예측 대시보드
-Streamlit App
+https://spartafinalproject-ddwihbnwcgrnwnhvjbu3db.streamlit.app
 
 최적 매체 추천 대시보드
-Streamlit App
+https://project5-new-add-mda-recommendation.streamlit.app
 
 전체 데이터 분석 대시보드
-Tableau Dashboard
+https://public.tableau.com/app/profile/.17596052/viz/_17590447017330/sheet0
+
+### 📹 최종 영상
+https://youtu.be/en3Jc6etEJk?si=K0p0yMCRpB2hkFXn
