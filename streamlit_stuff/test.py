@@ -13,6 +13,8 @@ import plotly.express as px
 
 import streamlit as st
 
+# source venv/bin/activate    
+
 # # 페이지 폭/사이드바 먼저 세팅 (가급적 맨 위)
 # st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 
