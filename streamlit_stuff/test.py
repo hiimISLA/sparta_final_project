@@ -10,9 +10,12 @@ from streamlit_option_menu import option_menu
 import numpy as np
 import streamlit as st
 import plotly.express as px
+import os
 
-import streamlit as st
-
+# ------------------------------------------------
+# BASE_DIR 세팅
+# ------------------------------------------------
+BASE_DIR = os.path.dirname(__file__)
 # source venv/bin/activate    
 
 # # 페이지 폭/사이드바 먼저 세팅 (가급적 맨 위)
@@ -70,7 +73,7 @@ selected = option_menu(
 if selected == "광고 소진 확인":
     @st.cache_data
     def df1_1():
-        return pd.read_csv("df1_1.csv")
+        return pd.read_csv(os.path.join(BASE_DIR, "df1_1.csv"))
     df1_1 = df1_1()
 
     # 위/아래 영역 나누기
@@ -96,7 +99,7 @@ if selected == "광고 소진 확인":
     with bottom:
         @st.cache_data
         def df1_2():
-            df = pd.read_parquet("df1_2.parquet")
+            df = pd.read_parquet(os.path.join(BASE_DIR, "df1_2.parquet"))
             df = df.rename(columns={"광고ID": "ads_idx", "매체ID": "mda_idx"})
             return df
 
@@ -147,7 +150,7 @@ if selected == "광고 소진 확인":
 elif selected == "소진 대응 확인":
     @st.cache_data
     def load_df():
-        df = pd.read_csv("df2_1.csv")
+        df = pd.read_csv(os.path.join(BASE_DIR, "df2_1.csv"))
         df["rpt_time_date"] = pd.to_datetime(df["rpt_time_date"], errors="coerce")
         df["ads_edate"] = pd.to_datetime(df["ads_edate"], errors="coerce")
         df["goal_final_num"] = pd.to_numeric(df["goal_final"], errors="coerce")
@@ -239,7 +242,7 @@ elif selected == "소진 대응 확인":
 elif selected == "수요 예측 확인":
     @st.cache_data
     def df3_1():
-        return pd.read_csv("df3_1_2.csv")   # parquet → csv 로 변경
+        return pd.read_csv(os.path.join(BASE_DIR, "df3_1_2.csv"))   # parquet → csv 로 변경
 
     df_merged = df3_1()
 
