@@ -45,3 +45,6 @@ https://public.tableau.com/app/profile/.17596052/viz/_17590447017330/sheet0
 
 ### 📹 최종 영상
 https://youtu.be/en3Jc6etEJk?si=K0p0yMCRpB2hkFXn
+
+### 최종 발표 PPT
+https://www.figma.com/deck/yD1Y7XTWOz3pAnG6MwjucU/%EC%B5%9C%EC%A2%85-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8---IVE-KOREA-%EB%B0%9C%ED%91%9C-%EC%9E%90%EB%A3%8C?node-id=9-64&t=0YeM33f1dbTp9OdX-1
